@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export BASEDIR=$(cd $(dirname $0) && pwd)
+
 # In case location isn't set
 if [ -z "$APPPATH" ]; then
   APPPATH=$APPNAME
@@ -13,14 +15,44 @@ fi
 # Installs nvm if it's not installed
 if ! [ -x "$(command -v nvm)" ]; then
   echo 'nvm is not installed.'
-  . ./helper/nvm-installer.sh
+  . "$BASEDIR/helper/nvm-installer.sh"
   echo 'nvm installed!'
 fi
 
+# Exit if nvm hasn't been successfully instaled
 if [ -z "nvm -v" ]; then
   echo "Error: nvm not installed correctly."
   exit 1
 fi
 
-nvm install --lts
-node -v
+# Install lastest node version as default
+echo $NODEVERSION
+if [ -z "$NODEVERSION" ]; then
+  nvm install --lts
+else
+  nvm install $NODEVERSION
+fi
+
+# Exit if node hasn't been successfully instaled
+if [ -z "node -v" ]; then
+  echo "Error: node not installed correctly."
+  exit 2
+fi
+
+# Install react with Typescript
+cd $APPPATH
+. "$BASEDIR/helper/create-react-app.sh"
+
+# Creates node-version file
+if [ -e ".node-version" ]; then
+  rm ".node-version"
+fi
+NODEINSTALLED=$(command node -v)
+touch ".node-version" && echo "${NODEINSTALLED:1}" >> .node-version
+
+# Creates nvmrc file
+if [ -e ".nvmrc" ]; then
+  rm ".nvmrc"
+fi
+NODEINSTALLED=$(command node -v)
+touch ".nvmrc" && echo "$NODEINSTALLED" >> .nvmrc

@@ -10,4 +10,4 @@ help: ## Print info about all commands
 
 .PHONY: react-app
 react-app: ## Create a react app
-	APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh
+	APPNAME=$(app-name) APPPATH=$(app-location) NODEVERSION=$(node-version) ./app-creator.sh
