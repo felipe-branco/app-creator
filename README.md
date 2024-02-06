@@ -2,6 +2,11 @@
 
 Create apps from scratch using one command.
 
+## Help
+```shell
+make help
+```
+
 ## Creating a React (+Typescript) app
 
 ```shell
