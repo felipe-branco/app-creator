@@ -15,7 +15,7 @@ cp -a $BASEDIR/templates/react/app/* ./src
 
 echo "\n"
 echo "-------"
-echo "Add eslint and prettier npm scripts to package.json if you will:"
+echo "Add eslint and prettier npm scripts to package.json:"
 echo "-------"
 echo '"lint":"eslint .",'
 echo '"lint:fix":"eslint . --fix",'

@@ -15,7 +15,7 @@ fi
 # Installs nvm if it's not installed
 if ! [ -x "$(command -v nvm)" ]; then
   echo 'nvm is not installed.'
-  . "$BASEDIR/helper/nvm-installer.sh"
+  . "$BASEDIR/helpers/nvm-installer.sh"
   echo 'nvm installed!'
 fi
 
@@ -41,7 +41,11 @@ fi
 
 # Install react with Typescript
 cd $APPPATH
-. "$BASEDIR/helper/create-react-app.sh"
+if [ $APPTYPE == "react" ]; then
+  . "$BASEDIR/helpers/create-react-app.sh"
+elif [ $APPTYPE == "nextjs" ]; then
+  . "$BASEDIR/helpers/create-nextjs-app.sh"
+fi
 
 # Creates node-version file
 if [ -e ".node-version" ]; then

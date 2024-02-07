@@ -10,7 +10,13 @@ make help
 ## Creating a React (+Typescript) app
 
 ```shell
-make react-app <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+make react <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+```
+
+## Creating a Nextjs app
+
+```shell
+make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
 ```
 
 <!--
