@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo 'Creating Nextjs app...'
-npx create-next-app@latest . --use-npm --yes --ts --eslint --tailwind --app --no-src-dir --import-alias "@/*" --example with-vitest with-redux
+npx create-next-app@latest . --use-npm --yes --ts --eslint --no-tailwind --app --no-src-dir --import-alias "@/*" --example with-vitest with-redux
 echo 'Nextjs app created!'
 
 echo 'Installing prettier...'
@@ -22,6 +22,7 @@ npm i styled-components
 echo 'Styled-components installed!'
 
 echo 'Moving things around...'
+
 # Remove some of the default stuff
 rm -rf __tests__
 rm -rf app/blog
@@ -30,8 +31,12 @@ rm -rf pages
 rm -rf styles
 rm app/counter.tsx
 rm app/counter.test.tsx
+
 # Copy template files
 cp -a $BASEDIR/templates/nextjs/.[^.]* .
 cp -a $BASEDIR/templates/nextjs/app/* ./app
+
+# Remove warning from vite config
+mv vitest.config.ts vitest.config.mts
 
 echo 'Done!'
