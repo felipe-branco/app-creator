@@ -10,7 +10,24 @@ Create structured apps from scratch using one command. App types available so fa
 make help
 ```
 
+## Creating a Nextjs app (Recommended)
+
+```shell
+make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+```
+
+### Packages
+```
+- Eslint
+- Prettier
+- Vitest
+- Redux
+- Styled components
+```
+
 ## Creating a React (+Typescript) app
+
+As of now `create-react-app` hasn't caught up with most up-to-date dependencies.
 
 ```shell
 make react <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
@@ -26,20 +43,6 @@ make react <app-name=my-app> [app-location=./path/to/app/location] [node-version
 - Styled components
 ```
 
-## Creating a Nextjs app
-
-```shell
-make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
-```
-
-### Packages
-```
-- Eslint
-- Prettier
-- Vitest
-- Redux
-- Styled components
-```
 
 ## Motivation
 
