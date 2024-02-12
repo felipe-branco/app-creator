@@ -9,7 +9,7 @@ cp -a $BASEDIR/templates/node/* .
 
 echo "\n"
 echo "-------"
-echo "Once your workspace is ready, add to package.json:"
+echo "Once your workspace is ready, add to "scripts" in the root package.json:"
 echo "-------"
 echo '"test": "jest",'
 echo '"build": "pnpm -r --stream build",'
