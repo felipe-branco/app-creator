@@ -4,6 +4,7 @@ Create structured apps from scratch using one command. App types available so fa
 
 - Create a React + Typescript app
 - Create a Nextjs app
+- Create a modular Node app
 
 ## Help
 ```shell
@@ -43,6 +44,30 @@ make react <app-name=my-app> [app-location=./path/to/app/location] [node-version
 - Styled components
 ```
 
+## Creating a modular Node app
+
+
+```shell
+make node <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+```
+
+### Requirements
+
+- Docker
+- Visual Studio Code
+- Dev Containers extension
+
+That's it. Here the full [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial)
+
+### Packages
+```
+- pnpm
+- Typescript
+- Eslint
+- Prettier
+- Jest
+- Esbuild
+```
 
 ## Motivation
 
@@ -50,7 +75,9 @@ Automate apps creation using the sames tools for linting, testing and so on ever
 
 <!--
 [TODO]
+## Creating a rails app
 ## Creating a modular Node app
+
 
 ```shell
 make node-app app-name ./path/to/app/location
