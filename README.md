@@ -2,16 +2,16 @@
 
 Create structured apps from scratch using one command. App types available so far:
 
-- Create a React + Typescript app
-- Create a Nextjs app
-- Create a modular Node app
+- [Create a Nextjs app](#creating-a-nextjs-app)
+- [Create a React + Typescript app](#creating-a-react-typescript-app)
+- [Create a modular Node app](#creating-a-modular-node-app)
 
 ## Help
 ```shell
 make help
 ```
 
-## Creating a Nextjs app (Recommended)
+## Creating a Nextjs app
 
 ```shell
 make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
@@ -63,11 +63,17 @@ cd ./path/to/app/location
 code .
 ```
 4. Click on the Dev Containers extension icon
+
 ![Click on the Dev Containers extension icon](https://github.com/jwasham/coding-interview-university/assets/5504589/787c47e5-77be-4ca7-92cc-93905fdaeeea)
+
 5. Click on the '+' icon on the extension's explorer right corner
+
 ![Click on the '+' icon on the extension's explorer right corner](https://github.com/jwasham/coding-interview-university/assets/5504589/f7b820bd-deda-4a94-8bad-361fe238c8dd)
+
 6. Selects the "Open Current Folder in Container" option
+
 ![Selects the "Open Current Folder in Container" option](https://github.com/jwasham/coding-interview-university/assets/5504589/701361ee-7eb0-4a5a-b67e-cd0ea23d2080)
+
 7. Wait the project's setup and open a terminal on the container workspace
 8. Check the available commands on the project's README file
 
