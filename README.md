@@ -46,6 +46,14 @@ make react <app-name=my-app> [app-location=./path/to/app/location] [node-version
 
 ## Creating a modular Node app
 
+### Requirements
+
+- Docker
+- Visual Studio Code
+- Dev Containers extension
+
+That's it. Here the full [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial).
+
 ### Recommended
 Make sure `app-location` is an empty git repository.
 
@@ -76,15 +84,6 @@ code .
 
 7. Wait the project's setup and open a terminal on the container workspace
 8. Check the available commands on the project's README file
-
-
-### Requirements
-
-- Docker
-- Visual Studio Code
-- Dev Containers extension
-
-That's it. Here the full [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial)
 
 ### Packages
 ```
