@@ -1,7 +1,7 @@
 {
-  "name": "event-source",
+  "name": "package2",
   "version": "1.0.0",
-  "description": "Provides event sourcing base functions.",
+  "description": "",
   "main": "src/index.ts",
   "publishConfig": {
     "main": "dist/index.js",

@@ -5,5 +5,8 @@ const base = require('./jest.config.base.js')
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  projects: ['<rootDir>/packages/*/jest.config.js'],
+  projects: [
+    '<rootDir>/packages/*/jest.config.js',
+    '<rootDir>/app/jest.config.js'
+  ],
 }
