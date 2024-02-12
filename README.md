@@ -52,7 +52,7 @@ make react <app-name=my-app> [app-location=./path/to/app/location] [node-version
 - Visual Studio Code
 - Dev Containers extension
 
-That's it. Here the full [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial).
+That's it. No need to install anything locally. Here's the full [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial).
 
 ### Recommended
 Make sure `app-location` is an empty git repository.
