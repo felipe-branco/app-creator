@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "\n"
 echo 'Creating modular Node app...'
 
 # Copy template files
@@ -15,5 +16,7 @@ echo '"build": "pnpm -r --stream build",'
 echo '"lint:fix": "pnpm lint --fix",'
 echo '"lint": "eslint . --ext .ts,.tsx"'
 echo "-------"
+echo "\n"
 
 echo 'Done!'
+echo 'Now follow the instructions in the README file to spin up your workspace.'
