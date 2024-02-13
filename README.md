@@ -60,8 +60,10 @@ Make sure `app-location` is an empty git repository.
 ### Steps
 1. Make AppCreator create the app for you
 ```shell
-make node <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+make node <app-name=my-app> [app-location=./path/to/app/location]
 ```
+* As of now it uses the latest node stable version
+
 2. Go to the app folder
 ```shell
 cd ./path/to/app/location

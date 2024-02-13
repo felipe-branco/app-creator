@@ -54,6 +54,8 @@ elif [ $APPTYPE == "nextjs" ]; then
   . "$BASEDIR/helpers/create-nextjs-app.sh"
 elif [ $APPTYPE == "node" ]; then
   . "$BASEDIR/helpers/create-node-app.sh"
+elif [ $APPTYPE == "express" ]; then
+  . "$BASEDIR/helpers/create-express-app.sh"
 fi
 
 # Creates node-version file

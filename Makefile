@@ -18,4 +18,8 @@ react: ## Create a react app
 
 .PHONY: node
 node: ## Create a modular node app
-	APPTYPE="node" APPNAME=$(app-name) APPPATH=$(app-location) NODEVERSION=$(node-version) ./app-creator.sh
+	APPTYPE="node" APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh
+
+.PHONY: express
+express: ## Create an express app
+	APPTYPE="express" APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh
