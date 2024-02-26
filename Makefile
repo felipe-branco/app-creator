@@ -23,3 +23,7 @@ node: ## Create a modular node app
 .PHONY: express
 express: ## Create an express app
 	APPTYPE="express" APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh
+
+.PHONY: rails
+rails: ## Create a rails app
+	APPTYPE="rails" APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh
