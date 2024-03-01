@@ -25,5 +25,6 @@ express: ## Create an express app
 	APPTYPE="express" APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh
 
 .PHONY: rails
-rails: ## Create a rails app
+rails: ## Create a rails app + postgres
+	docker compose -f templates/db/postgres/docker-compose.yml up -d
 	APPTYPE="rails" APPNAME=$(app-name) APPPATH=$(app-location) ./app-creator.sh

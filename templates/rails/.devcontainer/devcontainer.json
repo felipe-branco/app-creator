@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Ruby",
+	"image": "mcr.microsoft.com/devcontainers/ruby:3.1-bullseye",
+	"forwardPorts": [3000],
+	"postCreateCommand": "./.devcontainer/scripts/postCreateCommand.sh",
+	"customizations": {
+    "vscode": {
+      "extensions": [
+        "castwide.solargraph",
+        "rubocop.vscode-rubocop",
+        "kaiwood.endwise",
+        "rayhanw.erb-helpers",
+        "aki77.rails-db-schema",
+        "mikestead.dotenv",
+        "IBM.output-colorizer",
+        "vincaslt.highlight-matching-tag"
+      ]
+    }
+  }
+}
