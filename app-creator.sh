@@ -3,6 +3,7 @@
 BASEDIR=$(cd "$(dirname "$0")" && pwd)
 export BASEDIR
 
+
 DEVCONTAINER_APP=false
 if [ "$APPTYPE" = "node" ] || [ "$APPTYPE" = "rails" ]; then
   DEVCONTAINER_APP=true
@@ -14,6 +15,10 @@ if [ "$APPTYPE" = "node" ] || [ "$APPTYPE" = "nextjs" ] || [ "$APPTYPE" = "react
 fi
 
 [ $DEVCONTAINER_APP = false ] && [ $IS_NODE_APP = true ] && FRONTEND_APP=true || FRONTEND_APP=false
+
+if [ "$STYLING" = "styled-components" ] || [ "$STYLING" = "material-ui" ]; then
+  export STYLING
+fi
 
 create_app_folder() {
   # In case location isn't set

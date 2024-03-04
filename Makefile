@@ -10,7 +10,7 @@ help: ## Print info about all commands
 
 .PHONY: nextjs
 nextjs: ## Create a nextjs app
-	APPTYPE="nextjs" APPNAME=$(app-name) APPPATH=$(app-location) NODEVERSION=$(node-version) ./app-creator.sh
+	APPTYPE="nextjs" APPNAME=$(app-name) APPPATH=$(app-location) NODEVERSION=$(node-version) STYLING=$(styling) ./app-creator.sh
 
 .PHONY: react
 react: ## Create a react app

@@ -15,7 +15,7 @@ make help
 ## Creating a Nextjs app
 
 ```shell
-make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number] [styling="styled-components" || "material-ui"]
 ```
 
 ### Packages
@@ -23,7 +23,6 @@ make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-versio
 - Eslint
 - Prettier
 - Vitest
-- Redux
 - Styled components
 ```
 
