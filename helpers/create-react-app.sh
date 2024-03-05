@@ -33,6 +33,6 @@ fi
 
 if [ "$STYLING" = "material-ui" ]; then
   echo 'Installing material-ui...'
-  npm i @mui/material-nextjs @emotion/cache
+  npm i @mui/material @emotion/react @emotion/styled @emotion/cache
   echo 'Material-ui installed!'
 fi
