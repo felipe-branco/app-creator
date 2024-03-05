@@ -23,12 +23,10 @@ make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-versio
 - Eslint
 - Prettier
 - Vitest
-- Styled components
+- Styled components | Material UI
 ```
 
-## Creating a React (+Typescript) app
-
-As of now `create-react-app` hasn't caught up with most up-to-date dependencies.
+## Creating a Vite React (+Typescript) app
 
 ```shell
 make react <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number] [styling="styled-components" || "material-ui"]
@@ -39,9 +37,8 @@ make react <app-name=my-app> [app-location=./path/to/app/location] [node-version
 - Typescript
 - Eslint
 - Prettier
-- Jest
-- Redux
-- Styled components
+- Vitest
+- Styled components | Material UI
 ```
 
 ## Creating a modular Node app
