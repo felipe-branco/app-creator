@@ -14,7 +14,7 @@ nextjs: ## Create a nextjs app
 
 .PHONY: react
 react: ## Create a react app
-	APPTYPE="react" APPNAME=$(app-name) APPPATH=$(app-location) NODEVERSION=$(node-version) ./app-creator.sh
+	APPTYPE="react" APPNAME=$(app-name) APPPATH=$(app-location) NODEVERSION=$(node-version) STYLING=$(styling) ./app-creator.sh
 
 .PHONY: node
 node: ## Create a modular node app

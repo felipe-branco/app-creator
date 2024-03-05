@@ -31,7 +31,7 @@ make nextjs <app-name=my-app> [app-location=./path/to/app/location] [node-versio
 As of now `create-react-app` hasn't caught up with most up-to-date dependencies.
 
 ```shell
-make react <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number]
+make react <app-name=my-app> [app-location=./path/to/app/location] [node-version=version.number] [styling="styled-components" || "material-ui"]
 ```
 
 ### Packages

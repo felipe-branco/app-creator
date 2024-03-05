@@ -1,8 +1,11 @@
 #!/bin/sh
 
+if [ -z "$APPNAME" ]; then
+  APPNAME='my-app'
+fi
+
 BASEDIR=$(cd "$(dirname "$0")" && pwd)
 export BASEDIR
-
 
 DEVCONTAINER_APP=false
 if [ "$APPTYPE" = "node" ] || [ "$APPTYPE" = "rails" ]; then

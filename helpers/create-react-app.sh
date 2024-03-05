@@ -1,30 +1,38 @@
 #!/bin/sh
 
 echo 'Creating React app...'
-npx create-react-app . --template typescript
-npm i @babel/plugin-proposal-private-property-in-object --save-dev # Fix babel warning
+npm create vite@latest . -- --template react-ts
 echo 'React app created!'
 
-echo 'Installing eslint and prettier...'
+echo 'Installing eslint, prettier, and vitest...'
 npm i eslint eslint-import-resolver-typescript eslint-plugin-import --save-dev
 npm i prettier eslint-config-prettier eslint-plugin-prettier --save-dev
+npm i vitest --save-dev
 
 # Copy template files
-cp -a $BASEDIR/templates/react/.[^.]* .
-cp -a $BASEDIR/templates/react/app/* ./src
+cp -a "$BASEDIR"/templates/react/.[!.]* .
+cp -a "$BASEDIR"/templates/react/app/* ./src
 
-echo "\n"
+printf '\n'
 echo "-------"
 echo "Add eslint and prettier npm scripts to package.json:"
 echo "-------"
-echo '"lint":"eslint .",'
 echo '"lint:fix":"eslint . --fix",'
 echo '"verify":"prettier --check . && npm run lint",'
 echo '"format":"prettier --write ."'
 echo "-------"
 
-echo 'Eslint and prettier set!'
+echo 'Eslint, prettier, and vitest installed...'
+printf '\n'
 
-echo 'Installing styled-components...'
-npm i styled-components
-echo 'Styled-components installed!'
+if [ "$STYLING" = "styled-components" ]; then
+  echo 'Installing styled-components...'
+  npm i styled-components
+  echo 'Styled-components installed!'
+fi
+
+if [ "$STYLING" = "material-ui" ]; then
+  echo 'Installing material-ui...'
+  npm i @mui/material-nextjs @emotion/cache
+  echo 'Material-ui installed!'
+fi
