@@ -68,7 +68,7 @@ installs_frontend_local_dependencies() {
 }
 
 create_env_rc_files() {
-  if [ $IS_NODE_APP = true ]; then
+  if [ "$FRONTEND_APP" = true ]; then
     # Creates node-version file
     if [ -e ".node-version" ]; then
       rm ".node-version"
