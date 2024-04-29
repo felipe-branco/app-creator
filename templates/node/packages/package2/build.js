@@ -1,7 +1,7 @@
 const { nodeExternalsPlugin } = require('esbuild-node-externals')
 
 const buildShallow =
-  process.argv.includes('--shallow') || process.env.ATP_BUILD_SHALLOW === 'true'
+  process.argv.includes('--shallow')
 
 require('esbuild').build({
   logLevel: 'info',
